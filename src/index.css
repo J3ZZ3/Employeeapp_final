@@ -5,9 +5,24 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  animation: colorChange 20s ease infinite; /* Animation for background */
+}
+
+@keyframes colorChange {
+  0% { background-color: #FF5733; } /* Color 1 */
+  10% { background-color: #FFBD33; } /* Color 2 */
+  20% { background-color: #DBFF33; } /* Color 3 */
+  30% { background-color: #75FF33; } /* Color 4 */
+  40% { background-color: #33FF57; } /* Color 5 */
+  50% { background-color: #33FFBD; } /* Color 6 */
+  60% { background-color: #33DBFF; } /* Color 7 */
+  70% { background-color: #3375FF; } /* Color 8 */
+  80% { background-color: #3357FF; } /* Color 9 */
+  90% { background-color: #5733FF; } /* Color 10 */
+  100% { background-color: #FF5733; } /* Loop back to Color 1 */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} 

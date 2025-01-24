@@ -18,7 +18,6 @@ const EmployeeList = ({ employees, searchQuery, onEdit, onDelete }) => {
           <th>Email</th>
           <th>Phone</th>
           <th>Start Date</th>
-          <th>Image</th>
           <th>Actions</th>
         </tr>
       </thead>
@@ -31,10 +30,9 @@ const EmployeeList = ({ employees, searchQuery, onEdit, onDelete }) => {
             <td>{emp.email}</td>
             <td>{emp.phone}</td>
             <td>{emp.startDate}</td>
-            <td><img src={emp.image} alt={emp.name} /></td>
             <td>
-              <button onClick={() => onEdit(emp)}>Edit</button>
-              <button onClick={() => onDelete(emp.id)}>Delete</button>
+              <button className="action-button" onClick={() => onEdit(emp)}>Edit</button>
+              <button className="action-button" onClick={() => onDelete(emp.id)}>Delete</button>
             </td>
           </tr>
         ))}

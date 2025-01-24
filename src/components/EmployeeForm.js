@@ -42,70 +42,19 @@ const EmployeeForm = ({ employee, onSave, onCancel }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        name="name"
-        value={employeeData.name}
-        onChange={handleChange}
-        placeholder="Name"
-        required
-      />
-      <input
-        type="text"
-        name="surname"
-        value={employeeData.surname}
-        onChange={handleChange}
-        placeholder="Surname"
-        required
-      />
-      <input
-        type="email"
-        name="email"
-        value={employeeData.email}
-        onChange={handleChange}
-        placeholder="Email"
-        required
-      />
-      <input
-        type="text"
-        name="position"
-        value={employeeData.position}
-        onChange={handleChange}
-        placeholder="Position"
-        required
-      />
-      <input
-        type="text"
-        name="department" 
-        value={employeeData.department}
-        onChange={handleChange}
-        placeholder="Department"
-        required
-      />
-      <input
-        type="text"
-        name="phone"
-        value={employeeData.phone}
-        onChange={handleChange}
-        placeholder="Phone"
-        required
-      />
-      <input
-        type="date"
-        name="startDate"
-        value={employeeData.startDate}
-        onChange={handleChange}
-        required
-      />
-      <input
-        type="file"
-        name="image"
-        accept="image/*"
-        onChange={handleFileChange}
-      />
-      <button type="submit">Save</button>
-      <button type="button" onClick={onCancel}>Cancel</button>
+    <form onSubmit={handleSubmit} className="employee-form">
+      <input type="text" name="name" value={employeeData.name} onChange={handleChange} placeholder="Name" required />
+      <input type="text" name="surname" value={employeeData.surname} onChange={handleChange} placeholder="Surname" required />
+      <input type="email" name="email" value={employeeData.email} onChange={handleChange} placeholder="Email" required />
+      <input type="text" name="position" value={employeeData.position} onChange={handleChange} placeholder="Position" required />
+      <input type="text" name="department" value={employeeData.department} onChange={handleChange} placeholder="Department" required />
+      <input type="text" name="phone" value={employeeData.phone} onChange={handleChange} placeholder="Phone" required />
+      <input type="date" name="startDate" value={employeeData.startDate} onChange={handleChange} required />
+      <input type="file" name="image" accept="image/*" onChange={handleFileChange} />
+      <div className="form-buttons">
+        <button type="submit">Save</button>
+        <button type="button" onClick={onCancel}>Cancel</button>
+      </div>
     </form>
   );
 };
